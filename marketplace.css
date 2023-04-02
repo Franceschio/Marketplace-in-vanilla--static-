@@ -1,0 +1,534 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  user-select: none;
+}
+
+header {
+  width: 100vw;
+}
+
+.primanav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  background-color: rgb(1, 1, 82);
+  width: 100vw;
+  position: fixed;
+  z-index: 2;
+}
+
+.heroCont {
+  width: 97%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0px 0px 20px;
+}
+
+.hero {
+  width: 100%;
+  height: 500px;
+  color: white;
+  position: relative;
+}
+
+.hero img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: 0.8s;
+}
+
+.overflow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid blueviolet;
+  padding: 10px;
+}
+
+.circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0px 0px 0px;
+}
+
+.circle {
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: 0.8s;
+}
+
+main {
+  margin: 2rem;
+  padding: 1rem;
+  background-color: rgb(1, 1, 82);
+  border-radius: 5px;
+  padding-bottom: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: blueviolet;
+  transition: 0.4s;
+}
+
+a:hover {
+  color: whitesmoke;
+}
+
+ul {
+  list-style: none;
+}
+
+nav ul {
+  font-size: smaller;
+  display: flex;
+  gap: 20px;
+}
+
+.secondanav {
+  position: sticky;
+  border: 1px solid black;
+  height: 50px;
+  background-color: rgb(5, 5, 132);
+  margin-top: 90px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.secondanav ul {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.notizie {
+  display: flex;
+  justify-content: space-around;
+}
+
+.notizie a:hover {
+  color: blue;
+  transition: 0.8s;
+}
+
+.giorno,
+.settimana,
+.evento {
+  background-color: white;
+  height: 500px;
+  width: 400px;
+  margin: 5px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+
+.titolo {
+  text-align: center;
+}
+
+.immagine img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.titolosezione {
+  border: 5px solid blueviolet;
+  color: rgb(88, 51, 223);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  background-color: white;
+  border-radius: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#esplora h1 {
+  cursor: pointer;
+}
+
+#esplora:hover {
+  color: blue;
+}
+
+.barraprodotti {
+  display: flex;
+  gap: 5px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.prodotto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 15px;
+  height: 500px;
+  width: 400px;
+  transition: 1s;
+}
+
+.prodotto:hover {
+  transform: scale(1.2);
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 20px;
+  justify-content: center;
+  gap: 15px;
+  height: 300px;
+  transform: translateY(50px);
+  box-shadow: 5px 5px 5px rgb(2, 2, 40, 0.5);
+}
+
+.prodotto:hover img {
+  width: 150px;
+}
+
+.prodotto a:hover {
+  color: blue;
+}
+
+.immagineprodotto {
+  border: 2px solid rgb(5, 5, 132);
+  border-radius: 4px;
+}
+
+.immagineprodotto img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.barraCard {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 300px;
+  width: 225px;
+  margin: 15px;
+  padding: 5px;
+  border: 2px solid rgb(1, 1, 82);
+  background-color: white;
+  border-radius: 20px;
+  gap: 15px;
+  color: rgb(1, 1, 91);
+  transition: 0.5s;
+}
+
+.card h1 {
+  color: blueviolet;
+  cursor: pointer;
+  transition: 0.8s;
+  text-align: center;
+}
+.card h1:hover {
+  color: blue;
+}
+
+.card:hover {
+  transform: scale(1.2);
+  border-color: rgb(6, 6, 159);
+  filter: saturate(1.2);
+}
+
+.immagineCard {
+  border: 2px solid rgb(5, 5, 132);
+  border-radius: 3px;
+  width: 150px;
+}
+
+.immagineCard img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.descrizioneprodotto {
+  font-family: monospace;
+  font-size: x-small;
+}
+
+.piùAcquistato {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: saturate(1.3);
+}
+
+footer {
+  background-color: rgb(5, 5, 132);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 100vw;
+}
+
+footer h1 {
+  text-align: center;
+  margin: 10px;
+}
+
+footer li:hover {
+  transform: scale(1.5);
+  transition: 0.8s;
+}
+
+footer h4,
+h1 {
+  cursor: default;
+}
+
+.operazioni ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 10px;
+}
+
+.operazioni {
+  margin: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.assistenza {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contatti {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.torna {
+  text-align: center;
+  font-family: monospace;
+  height: 20px;
+}
+
+.torna:hover {
+  background-color: rgb(2, 2, 40);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1080px) {
+  #barra {
+    width: 400px;
+  }
+
+  .barraprodotti {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .primanav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px;
+  }
+
+  #logo-39 {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    height: 40px;
+    width: 40px;
+  }
+
+  #barra {
+    width: 230px;
+    margin-left: 10px;
+  }
+
+  .secondanav {
+    margin-top: 60px;
+  }
+
+  .secondanav ul {
+    font-size: x-small;
+    align-items: flex-end;
+    padding: 8px;
+  }
+
+  .heroCont {
+    margin: 10px 0px 0px 0px;
+    width: 100%;
+  }
+
+  .hero {
+    height: 300px;
+  }
+
+  .hero img {
+    border-radius: 0px;
+  }
+
+  .overflow {
+    border-radius: 0px;
+  }
+
+  .notizie {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    margin: 0;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    padding: 5px;
+    width: 100vw;
+    border-radius: 0;
+  }
+
+  .giorno,
+  .settimana,
+  .evento {
+    width: 360px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
+    gap: 15px;
+  }
+
+  .barraprodotti {
+    justify-content: center;
+    margin: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+
+  .prodotto {
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 20px;
+    justify-content: center;
+    gap: 15px;
+    height: 300px;
+    width: 250px;
+    margin: 15px;
+    padding: 5px;
+    transform: none;
+  }
+
+  .prodotto img {
+    width: 150px;
+  }
+
+  .prodotto:hover {
+    transform: translateY(0px);
+  }
+
+  .immagineprodotto:hover {
+    transform: none;
+  }
+
+  .titolosezione {
+    text-align: center;
+  }
+
+  .barraCard {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    justify-content: flex-start;
+    scroll-snap-type: x mandatory;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .prodotto {
+    transform: translateX(0px);
+  }
+
+  .prodotto:hover {
+    transform: translateX(0px);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .primanav {
+    justify-content: flex-end;
+  }
+
+  .secondanav ul {
+    padding: 0;
+    gap: 10px;
+  }
+
+  .giorno,
+  .settimana,
+  .evento {
+    width: 230px;
+    margin: 5px;
+    padding: 10px;
+  }
+
+  #logo-39 {
+    height: 30px;
+    width: 30px;
+    top: 60%;
+    transform: translateY(-30px);
+  }
+}

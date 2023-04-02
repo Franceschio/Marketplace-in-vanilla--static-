@@ -1,0 +1,197 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 30px solid rgb(1, 1, 82);
+  width: 100vw;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: 12px;
+  color: blueviolet;
+}
+
+a:hover {
+  transition: 0.5s;
+  color: rgb(132, 0, 255);
+  transform: scale(1.2);
+  color: blue;
+}
+
+.contenitore {
+  border: 20px solid rgb(5, 5, 132);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  padding: 40px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  border: 15px solid rgb(5, 5, 132);
+  border-radius: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
+
+.inserimenti {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.inserimenti input {
+  padding: 7px;
+  border-radius: 20px;
+  border: 3px solid blueviolet;
+}
+
+.aiuti {
+  display: flex;
+  gap: 60px;
+}
+
+.ricordami {
+  display: flex;
+  gap: 4px;
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+.ricordami p {
+  cursor: default;
+}
+
+.dimenticato {
+  display: flex;
+  gap: 30px;
+}
+
+.dimenticato a {
+  font-size: 10px;
+}
+
+button {
+  border: 2px solid rgb(1, 1, 82);
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px;
+  transition: 0.6s;
+}
+
+button:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.accessi {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#accedi {
+  width: 100px;
+}
+
+#accedi:hover {
+  background-color: rgb(1, 1, 82);
+}
+
+#accediG:hover,
+#accediF:hover {
+  background-color: blueviolet;
+}
+
+.accessiParticolari {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.accessiParticolari button {
+  border-color: blueviolet;
+}
+
+span {
+  font-size: 8px;
+  font-family: monospace;
+  margin-top: 30px;
+  cursor: default;
+  user-select: none;
+}
+
+footer ul {
+  display: flex;
+  gap: 20px;
+  transform: translateX(5px);
+}
+
+footer li:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+footer ul hr {
+  transform: rotate(90deg);
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    border: 10px;
+    height: 100vh;
+  }
+
+  main {
+    border: none;
+  }
+
+  a:hover {
+    transform: none;
+  }
+
+  .inserimenti {
+    flex-direction: column;
+    gap: 10px;
+    transform: translateX(6px);
+  }
+
+  footer hr {
+    display: none;
+  }
+
+  footer li:hover {
+    transform: none;
+  }
+}
